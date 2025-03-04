@@ -1,74 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Overall App Container */
 .app-container {
   display: flex;
   height: 100vh;
-  background-color: #e0f7e9;
-  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ffffff, #97dd99);
+  font-family: 'Poppins', sans-serif;
+  transition: background 3s ease-in-out;
 }
 
+/* Sidebar Styling */
 .sidebar {
   width: 250px;
-  background-color: #2e7d32;
-  color: white;
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+  color: rgb(255, 255, 255);
   padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
 }
 
 .sidebar h2 {
   margin-top: 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
+/* Sidebar List */
 .sidebar ul {
   list-style: none;
   padding: 0;
 }
 
 .sidebar ul li {
-  padding: 10px;
+  padding: 12px;
+  margin: 5px 0;
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .sidebar ul li:hover {
-  background-color: #1b5e20;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
 }
 
+/* Main Content */
 .main-content {
   flex: 1;
-  padding: 20px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
+/* Card (3D Model Container) */
 .card {
-  width: 400px;
-  height: 600px;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  width: 450px;
+  height: 650px;
+  background: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
+.card:hover {
+  transform: scale(1.02);
+  border: 3px solid #43a047;
+}
+
+/* Info Section */
 .info {
   text-align: center;
+  margin-top: 20px;
 }
 
 .info h2 {
-  margin-top: 0;
+  font-size: 2rem;
   background: linear-gradient(90deg, #66bb6a, #43a047);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 .info p {
-  font-size: 16px;
+  font-size: 1.2rem;
   color: #333;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth Transitions */
+.sidebar, .main-content, .card, .info h2, .info p {
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar ul li:active {
+  transform: scale(0.9);
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.back-home-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.back-home-btn:hover {
+  background: white;
+  color: #1b5e20;
 }
