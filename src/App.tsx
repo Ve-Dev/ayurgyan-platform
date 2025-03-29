@@ -54,9 +54,9 @@ const models = [
     info: 'Caladium is a genus of flowering plants in the family Araceae, native to tropical regions of the Americas. Known for their large, colorful leaves, caladiums are popular ornamental plants often grown in gardens and as houseplants. They thrive in warm, humid conditions and prefer partial shade. Caladiums are valued for their striking foliage, which comes in various colors and patterns, making them a favorite among gardeners.'
   },
   {
-    name: 'Benjamina Ficus',
-    url: 'models/benjamina ficus/plant_final1.glb',
-    info: 'Benjamina Ficus, commonly known as Weeping Fig, is a popular indoor tree native to Southeast Asia. It is characterized by its slender branches and glossy, oval leaves. This plant is known for its air-purifying qualities and is often used in homes and offices for its aesthetic appeal. Benjamina Ficus prefers bright, indirect light and moderate humidity, making it a favorite among indoor gardeners.'
+    name: 'Bonsai',
+    url: 'models/bonsai/uploads_files_4407406_ficus_bonsai.glb',
+    info: 'Bonsai is the art of cultivating miniature trees in containers, originating from ancient Chinese horticultural practices. The term "bonsai" means "planted in a container" in Japanese. This practice involves careful pruning, wiring, and training of trees to create aesthetically pleasing shapes and forms. Bonsai trees can be created from various species, and they require patience and skill to maintain their small size while ensuring healthy growth.'
   }
 ];
 
