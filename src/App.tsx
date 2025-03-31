@@ -1,10 +1,11 @@
-import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
-import ModelViewer from './components/ModelViewer';
-import Landing from './Landing';
-import HomePage from './pages/HomePage'; 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import "./App.css";
+import ModelViewer from "./components/ModelViewer";
+import Landing from "./Landing";
+import HomePage from "./pages/HomePage";
+import ChatBot from "./components/ChatBot";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 const models = [
@@ -60,11 +61,18 @@ const models = [
   }
 ];
 
+function ChatButton() {
+  const navigate = useNavigate();
+  return <button className="chat-button" onClick={() => navigate("/chat")}>💬 Chat with Plant Informant</button>;
+}
+
+
 function MainApp() {
   const [selectedModel, setSelectedModel] = useState(models[0]);
 
   return (
     <div className="app-container">
+      <ChatButton /> {/* Ghost button at the top right */}
       <div className="sidebar">
         <h2>Plant Models</h2>
         <ul>
@@ -74,9 +82,7 @@ function MainApp() {
             </li>
           ))}
         </ul>
-        <button className="back-home-btn" onClick={() => window.location.href = "/home"}>
-          Back to Home
-        </button>
+        <button className="back-home-btn" onClick={() => window.location.href = "/home"}>Back to Home</button>
       </div>
       <div className="main-content">
         <div className="card">
@@ -98,6 +104,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/app" element={<MainApp />} />
         <Route path="/home" element={<HomePage />} />
+        <Route path="/chat" element={<ChatBot />} />
       </Routes>
     </Router>
   );
