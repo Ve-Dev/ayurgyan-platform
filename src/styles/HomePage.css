@@ -1,85 +1,88 @@
-
-
 .home-container {
   font-family: 'Poppins', sans-serif;
-  background-color: #f9fff9;
+  background-color: #f0fff3;
   color: #2e7d32;
   text-align: center;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
 .hero {
-  padding: 50px 20px;
-  
+  padding: 60px 20px;
+  background: linear-gradient(to right, #a5d6a7, #e8f5e9);
+  border-radius: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
-
 .title {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: bold;
 }
 
 .subtitle {
-  font-size: 1.5rem;
-  margin-top: 10px;
+  font-size: 1.6rem;
   color: #388e3c;
-  
+  margin-top: 12px;
 }
 
 .about, .plants, .contact {
-  padding: 40px;
-  margin-top: 30px;
-  font-size: 10px;
-  
+  padding: 50px 20px;
+  margin-top: 40px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 h2 {
-  font-size: 2rem;
-  color: #ffffff;
+  font-size: 2.2rem;
+  color: #2e7d32;
+  margin-bottom: 20px;
 }
 
 .plant-container, .team-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
+  gap: 30px;
+  margin-top: 30px;
 }
 
 .plant, .team-member {
   text-align: center;
+  max-width: 250px;
 }
 
 .plant img, .team-member img {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 50px;
+  margin: 20px auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-.plant video{
+.plant video {
   width: 250px;
   height: 250px;
-  border-radius: 65%;
+  border-radius: 25px;
   object-fit: cover;
-  margin: 50px;
+  margin: 30px auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .team-member p {
   font-style: italic;
-  font-size: 20px;
-
+  font-size: 1rem;
+  margin-top: 10px;
 }
 
-.team-member a{
+.team-member a {
   color: #388e3c;
   text-decoration: none;
-  margin: 0 10px;
+  font-weight: 500;
   transition: color 0.3s;
 }
 
 .team-member a:hover {
   color: #66bb6a;
 }
-
-

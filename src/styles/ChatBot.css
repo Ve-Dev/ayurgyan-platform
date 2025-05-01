@@ -1,0 +1,133 @@
+/* Full Screen Chatbot Layout */
+.chatbot-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f7fdf9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Chatbot container with full height */
+.chatbot-container {
+  width: 90%;
+  max-width: 900px;
+  height: 95vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Header */
+.chatbot-header {
+  background: linear-gradient(90deg, #4caf50, #81c784);
+  padding: 20px;
+  font-size: 1.8rem;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* Chat body */
+.chatbot-body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #e9f7ef;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Message bubbles */
+.chat-message {
+  max-width: 75%;
+  padding: 14px 18px;
+  border-radius: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.user-message {
+  background: #c8e6c9;
+  color: #000;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.bot-message {
+  background: #ffffff;
+  color: #333;
+  align-self: flex-start;
+  text-align: left;
+}
+
+/* Footer Input Section */
+.chatbot-footer {
+  display: flex;
+  padding: 10px;
+  background: #f1f8e9;
+  border-top: 1px solid #c8e6c9;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.chatbot-footer input {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  font-size: 1rem;
+  background: #ffffff;
+  color: black;
+  outline: none;
+  border: 1px solid #81c784;
+}
+
+.chatbot-footer button {
+  padding: 14px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.chatbot-footer button:hover {
+  background-color: #388e3c;
+}
+
+/* Floating Button for 'Chat with Plant Info' */
+.floating-chat-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+  background: linear-gradient(90deg, #66bb6a, #388e3c);
+  color: white;
+  padding: 12px 18px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.floating-chat-button:hover {
+  transform: scale(1.05);
+}
